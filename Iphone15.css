@@ -1,0 +1,120 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text for contrast */
+}
+
+/* Apple logo and text at the top */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative; /* Added to make positioning easier */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.apple-logo {
+    width: 40px; /* Adjust size as needed */
+    margin-right: 10px;
+}
+
+.logo-container span {
+    font-size: 18px;
+    color: #aaf8ff; /* Light Blue text */
+}
+
+/* Shop name positioning */
+.shop-name {
+    position: absolute;
+    top: 20px; /* Align it with the header */
+    right: 20px; /* Position it on the upper right */
+    font-size: 18px;
+    color: #aaf8ff; /* Light Blue text for shop name */
+}
+
+/* Main layout */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    height: calc(100vh - 160px); /* Full height minus header and footer */
+    box-sizing: border-box;
+}
+
+/* Image on the left */
+.image-container {
+    flex: 1;
+    text-align: center;
+    margin-right: 50px; /* Space between image and details */
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-container h2 {
+    margin-top: 10px;
+    color: #fff; /* White text for the title */
+    font-size: 24px;
+}
+
+.specifications {
+    font-size: 16px;
+    color: #aaf8ff; /* Light Blue for specs text */
+    margin-top: 5px;
+}
+
+/* Horizontal line */
+.divider {
+    width: 80%;
+    margin: 15px auto;
+    border: none;
+    border-top: 1px solid #aaf8ff; /* Light blue horizontal line */
+}
+
+/* iPhone specs on the right */
+.image-details {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.image-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.image-details li {
+    margin-bottom: 10px;
+}
+
+/* Footer for credits */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: #666;
+    font-size: 14px;
+}
+
+/* For smaller screens, make the layout vertical */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .image-container {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+}
