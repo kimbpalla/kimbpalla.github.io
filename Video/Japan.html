@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="path-to-image.jpg">
+    <title>Explore Japan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="iconjapan.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #f5f5f5;
+        }
+
+        a {
+            color: #f5f5f5;
+            text-decoration: none;
+        }
+
+        header {
+            width: 100%;
+            background-color: #000;
+            padding: 20px 0;
+            color: #f5f5f5;
+            text-align: center;
+            position: relative;
+        }
+
+        .headerContent img {
+            width: 80px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        .headerContent h1 {
+            font-size: 2.5em;
+            margin: 10px 0;
+        }
+
+        .header-tagline {
+            font-size: 1.2em;
+            color: #ccc;
+        }
+
+        .back-arrow {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .back-arrow img {
+            width: 42px;
+            height: auto;
+        }
+
+        .back-arrow:hover {
+            opacity: 0.8;
+        }
+
+        .video-section {
+            margin: 20px 0;
+            text-align: center;
+            width: 100%;
+            max-width: 960px;
+        }
+
+        .video-section .ratio {
+            margin-bottom: 20px;
+        }
+
+        .content-section {
+            max-width: 800px;
+            padding: 20px;
+            background-color: #000;
+            border-radius: 8px;
+            margin: 20px;
+            text-align: justify;
+            font-size: large;
+        }
+
+        footer {
+            background-color: #000;
+            color: #ccc;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        @media (max-width: 768px) {
+            .headerContent h1 {
+                font-size: 2em;
+            }
+
+            .header-tagline {
+                font-size: 1em;
+            }
+
+            .content-section {
+                padding: 15px;
+                margin: 10px;
+            }
+
+            .back-arrow img {
+                width: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="text-center">
+        <button class="back-arrow" onclick="window.location.href='../index.html'" aria-label="Back to Home">
+            <img src="back-arrow.png" alt="Back Arrow">
+        </button>
+        <div class="headerContent">
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg" alt="Japan Flag" class="img-fluid">
+            <h1>Explore the Magic of Japan</h1>
+            <p class="header-tagline">A Journey through Japan's Vibrant Cities</p>
+        </div>
+    </header>
+
+    <div class="video-section">
+        <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/_qCDs0wtjO0?si=kXef2JO8C2FZCSxl" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2>Tokyo</h2>
+        <p>
+            Tokyo provides a vibrant blend of contemporary innovation and cultural legacy. Explore Tsukiji Outer Market
+            for local specialties and fresh seafood, or stop by TeamLab Borderless for an immersive digital art
+            experience. Tokyo's oldest temple, Sensoji Temple, and the busiest crossing in the world, Shibuya Crossing,
+            provide insights into the city's dynamic energy and rich past. Akihabara will appeal to techies, and Meiji
+            Shrine offers peace in the outdoors. Savor breathtaking views from Tokyo Skytree or explore Harajuku's
+            fashion and youth culture. The Tokyo National Museum is a must-see for art enthusiasts, while Odaiba offers
+            stunning skyline vistas along with modern buildings.
+        </p>
+    </div>
+
+    <div class="video-section">
+        <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/CqKmjOPlz84?si=F7a_5ob2PJtEoIx-" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h3>Kyoto</h3>
+        <p>
+            Kyoto is a city that elegantly combines history, culture, and natural beauty, as well as a number of
+            must-see attractions. Begin with the historic Kiyomizu-dera Temple, which is renowned for its magnificent
+            wooden structure and panoramic views. The Arashiyama Bamboo Grove provides a serene respite, while the
+            famous Fushimi Inari Shrine captivates visitors with its thousands of scarlet torii gates. Explore the
+            serene Kurama Temple and Kifune Shrine, as well as the picturesque Togetsukyo Bridge. The gold-covered
+            Kinkakuji Temple is stunning, and Nishiki Market is an excellent place to sample Kyoto's culinary delights.
+            Dive into history at Nijo Castle and admire the magnificent Kyoto Imperial Palace and Kyoto Gyoen. Finally,
+            Kyoto Station is more than just a transportation hub; it is a modern architectural gem worth visiting.
+        </p>
+    </div>
+
+    <div class="video-section">
+        <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/DiyqUEiKosA?si=eaB_5Dyfh62P4Ev8" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h4>Osaka</h4>
+        <p>
+            Welcome to the bustling city of Osaka in Japan! Our 2024 travel guide walks you through the top ten must-see
+            attractions in this vibrant city. Visit Osaka Castle and Shitennō-ji Temple, or see the views from Umeda Sky
+            Building and Tsūtenkaku Tower. Explore exciting exhibits at the Osaka Science Museum and the National Museum
+            of Art, or simply relax at the Osaka Aquarium Kaiyukan and the Tempozan Ferris Wheel. To experience local
+            culture, try street food in Dotonbori or visit the Kobe Port Tower and Osaka Tennōji Zoo & Park. This book
+            is the ideal way to see Osaka's distinct blend of culture, cuisine, and attractions.
+        </p>
+    </div>
+
+    <footer>
+        <p>© 2024 Explore Japan. All rights reserved. </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

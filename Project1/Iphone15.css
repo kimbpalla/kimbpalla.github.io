@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text for contrast */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative; 
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.apple-logo {
+    width: 40px; 
+    margin-right: 10px;
+}
+
+.logo-container span {
+    font-size: 18px;
+    color: #aaf8ff; 
+}
+
+.shop-name {
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+    font-size: 18px;
+    color: #aaf8ff; 
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    height: calc(100vh - 160px); 
+    box-sizing: border-box;
+    flex-wrap: wrap; 
+}
+
+.image-container {
+    flex: 1;
+    text-align: center;
+    margin-right: 50px; 
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-container h2 {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.specifications {
+    font-size: 16px;
+    color: #aaf8ff; 
+    margin-top: 5px;
+}
+
+.divider {
+    width: 80%;
+    margin: 15px auto;
+    border: none;
+    border-top: 1px solid #aaf8ff; 
+}
+
+.image-details {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.image-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.image-details li {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: #666;
+    font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+    .main-content {
+        padding: 20px;
+        height: auto; 
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+    
+    .image-container {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .image-container h2 {
+        font-size: 20px;
+    }
+
+    .specifications {
+        font-size: 14px;
+    }
+
+    .image-details {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header, .main-content, .footer {
+        padding: 10px;
+    }
+
+    .logo-container span, .shop-name, .specifications, .image-details {
+        font-size: 14px;
+    }
+
+    .apple-logo {
+        width: 30px;
+    }
+
+    .image-container h2 {
+        font-size: 18px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
