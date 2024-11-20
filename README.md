@@ -1,1 +1,0 @@
-# kimbpalla.github.io
