@@ -37,7 +37,7 @@ if (isset($_GET['page'])) {
 
   <style>
     body {
-      background-color:rgb(249, 227, 213);
+      background-color:rgb(248, 248, 248);
       font-family: 'Poppins', sans-serif;
       overflow: hidden;
     }
