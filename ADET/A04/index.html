@@ -133,709 +133,72 @@
         </div>
 
         <script>
-            var products = [
-                {
-                    "category": "Fresh Produce",
-                    "contents": [
-                        {
-                            "isAvailable": true,
-                            "name": "Fruit",
-                            "code": "FRT",
-                            "products": [
-                                {
-                                    "name": "Bananas",
-                                    "code": "BNN",
-                                    "image": "banana.png",
-                                    "price": 62
-                                },
-                                {
-                                    "name": "Red Apples",
-                                    "code": "APL",
-                                    "image": "apple.png",
-                                    "price": 167
-                                },
-                                {
-                                    "name": "Grapes",
-                                    "image": "grape.png",
-                                    "code": "GRP",
-                                    "price": 182
-                                },
-                                {
-                                    "name": "Yellow Mangoes",
-                                    "image": "mango.png",
-                                    "code": "MNG",
-                                    "price": 154
-                                },
-                                {
-                                    "name": "Cherry Tomatoes",
-                                    "image": "tomato.png",
-                                    "code": "TCHR",
-                                    "price": 140
-                                },
-                                {
-                                    "name": "Orange",
-                                    "image": "orange.png",
-                                    "code": "ORG",
-                                    "price": 120
-                                },
-                                {
-                                    "name": "Pineapple",
-                                    "image": "pineapple.png",
-                                    "code": "PNE",
-                                    "price": 80
-                                },
-                                {
-                                    "name": "Watermelon",
-                                    "image": "watermelon.png",
-                                    "code": "WML",
-                                    "price": 120
-                                },
-                                {
-                                    "name": "Avocado",
-                                    "image": "avocado.png",
-                                    "code": "AVC",
-                                    "price": 60
-                                },
+            var categories = [];
+            var products = [];
 
-                            ]
-                        },
-                        {
-                            "isAvailable": true,
-                            "name": "Vegetables",
-                            "code": "VGT",
-                            "products": [
-                                {
-                                    "name": "Carrots",
-                                    "image": "carrot.png",
-                                    "code": "CRT",
-                                    "price": 106
-                                },
-                                {
-                                    "name": "Green Leaf Lettuce",
-                                    "image": "lettuce.png",
-                                    "code": "GRLL",
-                                    "price": 84
-                                },
-                                {
-                                    "name": "Cucumber",
-                                    "image": "cucumber.png",
-                                    "code": "CCR",
-                                    "price": 65
-                                },
-                                {
-                                    "name": "Broccoli Crowns",
-                                    "image": "broccoli.png",
-                                    "code": "BRC",
-                                    "price": 135
-                                },
-                                {
-                                    "name": "Sweet Corn",
-                                    "image": "corn.png",
-                                    "code": "SCRN",
-                                    "price": 45
-                                },
-                                {
-                                    "name": "Squash",
-                                    "image": "squash.png",
-                                    "code": "SQH",
-                                    "price": 80
-                                },
-                                {
-                                    "name": "Okra",
-                                    "image": "okra.png",
-                                    "code": "OKR",
-                                    "price": 40
-                                },
-                                {
-                                    "name": "Eggplant",
-                                    "image": "eggplant.png",
-                                    "code": "EPT",
-                                    "price": 50
-                                },
-                                {
-                                    "name": "Siling Labuyo",
-                                    "image": "chili.png",
-                                    "code": "CHL",
-                                    "price": 50
-                                },
-                            ]
-                        },
-                    ]
-                },
-                {
-                    "category": "Meat & Seafood",
-                    "contents": [
-                        {
-                            "isAvailable": true,
-                            "name": "Meat",
-                            "code": "MT",
-                            "products": [
-                                {
-                                    "name": "Beef Rounds",
-                                    "image": "m1.png",
-                                    "code": "BFR",
-                                    "price": 420
-                                },
-                                {
-                                    "name": "Pork Belly",
-                                    "image": "m2.png",
-                                    "code": "PRK",
-                                    "price": 310
-                                },
-                                {
-                                    "name": "Chicken Breast",
-                                    "image": "m3.png",
-                                    "code": "CKN",
-                                    "price": 250
-                                },
-                                {
-                                    "name": "Ground Beef",
-                                    "image": "m4.png",
-                                    "code": "GRBF",
-                                    "price": 360
-                                },
-                                {
-                                    "name": "Pork Chops",
-                                    "image": "m5.png",
-                                    "code": "PKN",
-                                    "price": 295
-                                },
-                                {
-                                    "name": "Chicken Wings",
-                                    "image": "m6.png",
-                                    "code": "CWNG",
-                                    "price": 210
-                                },
-                                {
-                                    "name": "Beef Brisket",
-                                    "image": "m7.png",
-                                    "code": "BFBR",
-                                    "price": 430
-                                },
-                                {
-                                    "name": "Pork Tenderloin",
-                                    "image": "m8.png",
-                                    "code": "PTND",
-                                    "price": 350
-                                },
-                                {
-                                    "name": "Ground Pork",
-                                    "image": "m9.png",
-                                    "code": "GRDP",
-                                    "price": 280
-                                }
-                            ]
-                        },
-                        {
-                            "isAvailable": true,
-                            "name": "Seafood",
-                            "code": "SF",
-                            "products": [
-                                {
-                                    "name": "Shrimps",
-                                    "image": "s1.png",
-                                    "code": "SHR",
-                                    "price": 600
-                                },
-                                {
-                                    "name": "Salmon",
-                                    "image": "s2.png",
-                                    "code": "SLM",
-                                    "price": 950
-                                },
-                                {
-                                    "name": "Squid",
-                                    "image": "s3.png",
-                                    "code": "SQD",
-                                    "price": 480
-                                },
-                                {
-                                    "name": "Tilapia",
-                                    "image": "s4.png",
-                                    "code": "TLP",
-                                    "price": 180
-                                },
-                                {
-                                    "name": "Bangus",
-                                    "image": "s5.png",
-                                    "code": "BNG",
-                                    "price": 230
-                                },
-                                {
-                                    "name": "Mackerel",
-                                    "image": "s6.png",
-                                    "code": "MKR",
-                                    "price": 320
-                                },
-                                {
-                                    "name": "Farm Crabs",
-                                    "image": "s7.png",
-                                    "code": "FCRB",
-                                    "price": 580
-                                },
-                                {
-                                    "name": "Lobster",
-                                    "image": "s8.png",
-                                    "code": "LBS",
-                                    "price": 1400
-                                },
-                                {
-                                    "name": "Scallops",
-                                    "image": "s9.png",
-                                    "code": "SLP",
-                                    "price": 700
-                                },
-                            ]
-                        },
-                    ]
-                },
-                {
-                    "category": "Dairy & Egg",
-                    "contents": [
-                        {
-                            "isAvailable": true,
-                            "name": "Dairy",
-                            "code": "DRY",
-                            "products": [
-                                {
-                                    "name": "Fresh Cow's Milk",
-                                    "image": "d1.png",
-                                    "code": "FCM",
-                                    "price": 90
-                                },
-                                {
-                                    "name": "UHT Milk (Boxed)",
-                                    "image": "d2.png",
-                                    "code": "UHTM",
-                                    "price": 75
-                                },
-                                {
-                                    "name": "Cheddar Cheese Block",
-                                    "image": "d3.png",
-                                    "code": "CHZ",
-                                    "price": 150
-                                },
-                                {
-                                    "name": "Sliced Cheese",
-                                    "image": "d4.png",
-                                    "code": "SLCD",
-                                    "price": 110
-                                },
-                                {
-                                    "name": "Fruit Yogurt Cup",
-                                    "image": "d5.png",
-                                    "code": "FYC",
-                                    "price": 40
-                                },
-                                {
-                                    "name": "All-Purpose Cream",
-                                    "image": "d6.png",
-                                    "code": "APC",
-                                    "price": 90
-                                },
-                                {
-                                    "name": "Salted Butter",
-                                    "image": "d7.png",
-                                    "code": "SLTB",
-                                    "price": 95
-                                },
-                            ]
-                        },
-                        {
-                            "isAvailable": true,
-                            "name": "Egg",
-                            "code": "EGG",
-                            "products": [
-                                {
-                                    "name": "White Eggs",
-                                    "image": "d9.png",
-                                    "code": "WHT",
-                                    "price": 200
-                                },
-                                {
-                                    "name": "Brown Eggs",
-                                    "image": "d8.png",
-                                    "code": "BRW",
-                                    "price": 110
-                                },
-                            ]
-                        },
-                    ]
-                },
-                {
-                    "category": "Snacks & Sweets",
-                    "contents": [
-                        {
-                            "isAvailable": true,
-                            "name": "Snacks",
-                            "code": "SNK",
-                            "products": [
-                                {
-                                    "name": "Potato Chips",
-                                    "image": "sn1.png",
-                                    "code": "PCH",
-                                    "price": 85
-                                },
-                                {
-                                    "name": "Corn Chips",
-                                    "image": "sn2.png",
-                                    "code": "CNC",
-                                    "price": 35
-                                },
-                                {
-                                    "name": "Salted Pretzels",
-                                    "image": "sn3.png",
-                                    "code": "SPZ",
-                                    "price": 35
-                                },
-                                {
-                                    "name": "Butter Popcorn",
-                                    "image": "sn4.png",
-                                    "code": "BPC",
-                                    "price": 45
-                                },
-                                {
-                                    "name": "Mixed Nuts",
-                                    "image": "sn5.png",
-                                    "code": "MNS",
-                                    "price": 35
-                                },
-                                {
-                                    "name": "Savory Crackers",
-                                    "image": "sn6.png",
-                                    "code": "SCR",
-                                    "price": 30
-                                },
-                                {
-                                    "name": "Cheese Tortillos Chips",
-                                    "image": "sn7.png",
-                                    "code": "CTC",
-                                    "price": 45
-                                },
-                                {
-                                    "name": "Pic-A",
-                                    "image": "sn8.png",
-                                    "code": "PIC",
-                                    "price": 60
-                                },
-                                {
-                                    "name": "Clover Cheese",
-                                    "image": "sn9.png",
-                                    "code": "CLV",
-                                    "price": 30
-                                }
-                            ]
-                        },
-                        {
-                            "isAvailable": true,
-                            "name": "Sweets",
-                            "code": "SWT",
-                            "products": [
-                                {
-                                    "name": "Chocolate Goya",
-                                    "image": "sw1.png",
-                                    "code": "CHG",
-                                    "price": 55
-                                },
-                                {
-                                    "name": "Rebisco Choco",
-                                    "image": "sw2.png",
-                                    "code": "CFB",
-                                    "price": 15
-                                },
-                                {
-                                    "name": "Potchi Gummy Bears",
-                                    "image": "sw3.png",
-                                    "code": "PGB",
-                                    "price": 30
-                                },
-                                {
-                                    "name": "Marshmallows",
-                                    "image": "sw4.png",
-                                    "code": "MAL",
-                                    "price": 38
-                                },
-                                {
-                                    "name": "Lipps",
-                                    "image": "sw5.png",
-                                    "code": "MHC",
-                                    "price": 35
-                                },
-                                {
-                                    "name": "Lollipops (Assorted)",
-                                    "image": "sw6.png",
-                                    "code": "LPA",
-                                    "price": 20
-                                },
-                                {
-                                    "name": "Chocolate Chip Cookies",
-                                    "image": "sw7.png",
-                                    "code": "CC",
-                                    "price": 65
-                                },
-                                {
-                                    "name": "Fudgee Bar Chocolate",
-                                    "image": "sw8.png",
-                                    "code": "FBC",
-                                    "price": 55
-                                },
-                                {
-                                    "name": "White Rabbit Buttertoffee",
-                                    "image": "sw9.png",
-                                    "code": "WTB",
-                                    "price": 35
-                                },
-                            ]
-                        },
-                    ]
-                },
-                {
-                    "category": "Canned Goods",
-                    "contents": [
-                        {
-                            "isAvailable": true,
-                            "name": "Canned Goods",
-                            "code": "CG",
-                            "products": [
-                                {
-                                    "name": "555 Sardines in Tomato Sauce",
-                                    "image": "c1.png",
-                                    "code": "555",
-                                    "price": 25
-                                },
-                                {
-                                    "name": "Argentina Corned Beef",
-                                    "image": "c2.png",
-                                    "code": "ARG",
-                                    "price": 40
-                                },
-                                {
-                                    "name": "Mega Tuna Flakes in Oil",
-                                    "image": "c3.png",
-                                    "code": "MGT",
-                                    "price": 45
-                                },
-                                {
-                                    "name": "Ligo Sardines Spanish Style",
-                                    "image": "c4.png",
-                                    "code": "LIG",
-                                    "price": 32
-                                },
-                                {
-                                    "name": "Hunt's Pork & Beans",
-                                    "image": "c5.png",
-                                    "code": "HUN",
-                                    "price": 35
-                                },
-                                {
-                                    "name": "Jolly Corn Kernels",
-                                    "image": "c6.png",
-                                    "code": "JCK",
-                                    "price": 30
-                                },
-                                {
-                                    "name": "Clara Ole Whole Tomatoes",
-                                    "image": "c7.png",
-                                    "code": "CLO",
-                                    "price": 40
-                                },
-                                {
-                                    "name": "Alaska Evaporated Milk",
-                                    "image": "c8.png",
-                                    "code": "ALK",
-                                    "price": 40
-                                },
-                                {
-                                    "name": "Angel Condensed Milk",
-                                    "image": "c9.png",
-                                    "code": "ANG",
-                                    "price": 45
-                                }
-                            ]
-                        },
-                    ]
-                },
-                {
-                    "category": "Beverages",
-                    "contents": [
-                        {
-                            "isAvailable": true,
-                            "name": "Soda",
-                            "code": "SD",
-                            "products": [
-                                {
-                                    "name": "Coca-Cola",
-                                    "image": "sd1.png",
-                                    "code": "CC",
-                                    "price": 25
-                                },
-                                {
-                                    "name": "Sprite",
-                                    "image": "sd2.png",
-                                    "code": "SPRT",
-                                    "price": 25
-                                },
-                                {
-                                    "name": "Royal",
-                                    "image": "sd3.png",
-                                    "code": "RYL",
-                                    "price": 25
-                                },
-                            ]
-                        },
-                        {
-                            "isAvailable": true,
-                            "name": "Water",
-                            "code": "WTR",
-                            "products": [
-                                {
-                                    "name": "Wilkins Mineral Water",
-                                    "image": "wtr1.png",
-                                    "code": "WIL",
-                                    "price": 15
-                                },
-                                {
-                                    "name": "Absolute Distilled",
-                                    "image": "wtr2.png",
-                                    "code": "ABSD",
-                                    "price": 20
-                                },
-                                {
-                                    "name": "Nature's Spring Water",
-                                    "image": "wtr3.png",
-                                    "code": "NSW",
-                                    "price": 15
-                                },
-                            ]
-                        },
-                        {
-                            "isAvailable": true,
-                            "name": "Juice",
-                            "code": "JU",
-                            "products": [
-                                {
-                                    "name": "Zesto Mango Juice",
-                                    "image": "ju1.png",
-                                    "code": "ZMJ",
-                                    "price": 20
-                                },
-                                {
-                                    "name": "Del Monte Pineapple",
-                                    "image": "ju2.png",
-                                    "code": "DMPI",
-                                    "price": 35
-                                },
-                                {
-                                    "name": "Minute Maid Orange",
-                                    "image": "ju3.png",
-                                    "code": "MMCL",
-                                    "price": 25
-                                },
-                            ]
-                        },
-                    ]
-                },
-                {
-                    "category": "Pantry Staples",
-                    "contents": [
-                        {
-                            "isAvailable": true,
-                            "name": "Pantry Staples",
-                            "code": "PS",
-                            "products": [
-                                {
-                                    "name": "White Rice (Dinorado 5KG)",
-                                    "image": "ps1.png",
-                                    "code": "WR",
-                                    "price": 465
-                                },
-                                {
-                                    "name": "All-Purpose Flour",
-                                    "image": "ps2.png",
-                                    "code": "APF",
-                                    "price": 93
-                                },
-                                {
-                                    "name": "White Sugar",
-                                    "image": "ps3.png",
-                                    "code": "WS",
-                                    "price": 80
-                                },
-                                {
-                                    "name": "Iodized Salt",
-                                    "image": "ps4.png",
-                                    "code": "IS",
-                                    "price": 55
-                                },
-                                {
-                                    "name": "Powdered Milk",
-                                    "image": "ps5.png",
-                                    "code": "PM",
-                                    "price": 109
-                                },
-                                {
-                                    "name": "Coconut Oil",
-                                    "image": "ps6.png",
-                                    "code": "C0",
-                                    "price": 580
-                                },
-                                {
-                                    "name": "Soy Sauce",
-                                    "image": "ps7.png",
-                                    "code": "SS",
-                                    "price": 52
-                                },
-                                {
-                                    "name": "Cane Vinegar",
-                                    "image": "ps8.png",
-                                    "code": "CV",
-                                    "price": 90
-                                },
-                                {
-                                    "name": "Elbow Macaroni Pasta",
-                                    "image": "ps9.png",
-                                    "code": "EMP",
-                                    "price": 80
-                                }
-                            ]
-                        },
-                    ]
-                },
-            ]
+            const getAllCategories = async () => {
+                fetch(
+                    'http://localhost/kimbpalla.github.io/ADET/A06/categories.php'
+                )
+                    .then(response => response.json())
+                    .then(data => {
+                        categories = data;
+                        loadCategories();
+                    });
+            }
+
+            const getAllProducts = async (categoryID) => {
+                const categoryData = {
+                    categoryID: categoryID
+                };
+
+                fetch(
+                    'http://localhost/kimbpalla.github.io/ADET/A06/products.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(categoryData)
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        products = data;
+                        loadProducts();
+                    });
+            }
+
+            getAllCategories();
 
             var total = 0;
 
             function loadCategories() {
                 var categoriesContainer = document.getElementById("categories");
 
-                products.forEach((product, index) => {
+                categories.forEach((category) => {
                     categoriesContainer.innerHTML += `
-                        <div onclick="loadProducts('`+ index + `')" class="card mx-1 custom-button p-3 text-center">
-                            <small>`+ product.category + `</small>
+                        <div onclick="getAllProducts('`+ category.categoryID + `')" class="card mx-1 custom-button p-3 text-center">
+                            <small>`+ category.categoryName + `</small>
                         </div>
                     `;
                 });
             }
 
-            function loadProducts(categoryIndex) {
+            function loadProducts(categoryID) {
                 var maincontainer = document.getElementById("maincontainer");
                 maincontainer.innerHTML = "";
 
-                products[categoryIndex].contents.forEach(content => {
-                    content.products.forEach(product => {
-                        maincontainer.innerHTML += `
-                            <div class='col-6 col-sm-4 col-md-3 col-lg-2 mb-3'>
-                                <div onclick="addToReceipt('` + product.price + `','` + content.code + product.code + `','` + product.image + `')" class="cardCustom mx-2 card p-2 text-center">
-                                    <img src="img/` + product.image + `" class="content-img mx-auto mb-1" alt='` + content.name + `'>
-                                    <small class="d-block product-name">` + content.code + ' ' + product.name + `</small>
-                                    <small class="d-block product-price">₱` + parseFloat(product.price).toFixed(2) + `</small>
-                                </div>
-                             </div>
-                        `;
-                    });
+                products.forEach(product => {
+                    maincontainer.innerHTML += `
+                        <div class='col-6 col-sm-4 col-md-3 col-lg-2 mb-3'>
+                            <div onclick="addToReceipt('` + product.productPrice + `','` + product.productCode + `','` + product.productImage + `')" class="cardCustom mx-2 card p-2 text-center">
+                                <img src="img/` + product.productImage + `" class="content-img mx-auto mb-1" alt='` + product.productName + `'>
+                                <small class="d-block product-name">` + product.productCode + ' ' + product.productName + `</small>
+                                <small class="d-block product-price">₱` + parseFloat(product.productPrice).toFixed(2) + `</small>
+                            </div>
+                        </div>
+                    `;
                 });
             }
-
 
             function addToReceipt(price, code, image) {
                 var receiptContainer = document.getElementById("receipt");
@@ -859,9 +222,7 @@
                     </div>
                 </div>
             `;
-
             }
-
 
             loadCategories();
         </script>
